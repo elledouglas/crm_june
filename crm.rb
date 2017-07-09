@@ -97,5 +97,9 @@ end
   puts Contact.find_by(attribute => value)
 
   end
+  #not sure if this goes outside of end 
+  at_exit do
+  ActiveRecord::Base.connection.close
+end
 
 end
